@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+.content {
+  padding: 32px;
+}
+
+h2 {
+  counter-increment: heading; /* Biến đếm */
+  counter-reset: sub-heading; /* Biến reset */
+}
+
+h3 {
+  counter-increment: sub-heading;
+}
+
+h2::before {
+  content: counter(heading) " - ";
+}
+
+h3::before {
+  content:  counter(heading) "." counter(sub-heading) " - ";
+}
